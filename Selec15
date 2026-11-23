@@ -1,0 +1,21 @@
+print("Ingrese las horas de estacionamiento:")
+H = float(input())
+
+print("Es horario nocturno? (S/N):")
+N = input().strip()
+
+# Proceso y cálculos
+if H < 0 or (N != "S" and N != "s" and N != "N" and N != "n"):
+    print("Datos no validos")
+else:
+    TB = H * 1.50
+    T = TB
+
+    if H > 8:
+        T = T * 1.25
+
+    if N == "S" or N == "s":
+        T = T * 1.30
+
+    print("Tarifa base: $", TB)
+    print("Total a pagar: $", T)
