@@ -1,0 +1,15 @@
+print("Ingrese el primer numero")
+    N1 = float(input())
+    print("Ingrese el segundo numero")
+    N2 = float(input())
+    print("Ingrese el trecer numero")
+    N3 = float(input())
+    print("Ingrese el cuarto numero")
+    N4 = float(input())
+    # Proceso y cálculos
+    S = N1+N2+N3+N4
+    P = N1*N2*N3*N4
+    M = S/4
+    print("La suma es:"), str(S), 
+    print("Es producto es:"), str(P), 
+    print("La media aritmetica es:"), str(M)
