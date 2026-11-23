@@ -1,0 +1,20 @@
+print("Ingrese el coeficiente A:")
+A = float(input())
+print("Ingrese el coeficiente B:")
+B = float(input())
+print("Ingrese el coeficiente C:")
+C = float(input())
+
+# Proceso y cálculos
+if A == 0:
+    print("No es una ecuacion cuadratica")
+else:
+    D = B ** 2 - 4 * A * C
+
+    if D > 0:
+        print("Tiene dos soluciones reales")
+    else:
+        if D == 0:
+            print("Tiene una solucion real")
+        else:
+            print("No tiene soluciones reales")
