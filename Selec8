@@ -1,0 +1,13 @@
+print("Ingrese el promedio final (0 a 10):")
+P = float(input())
+
+# Proceso y cálculos
+while P < 0 or P > 10:
+    print("El promedio debe estar entre 0 y 10")
+    print("Ingrese el promedio final (0 a 10):")
+    P = float(input())
+
+if P >= 7:
+    print("APRUEBA")
+else:
+    print("NO APRUEBA")
