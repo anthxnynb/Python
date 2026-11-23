@@ -1,0 +1,7 @@
+ print("Ingresar la base:")
+    B = float(input())
+    print("Ingresar la altura:")
+    H = float(input())
+    # Proceso y cálculos
+    A = (B*H)/2
+    print("La area del triangulo es:"), str(A)
