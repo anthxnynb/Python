@@ -1,0 +1,32 @@
+print("Ingrese las horas trabajadas")
+H = float(input())
+
+print("Ingrese el sueldo por hora trabajada")
+SXH = float(input())
+
+# Proceso y cálculos
+HE = 0
+
+# Horas trabajadas
+while H <= 0 or H > 168:
+    print("El numero ingresado debe ser mayor que 0 y menor o igual a 168 horas")
+    print("Ingrese las horas trabajadas")
+    H = float(input())
+
+# Sueldo por hora
+while SXH <= 0:
+    print("El sueldo por hora debe ser mayor que 0")
+    print("Ingrese el sueldo por hora trabajada")
+    SXH = float(input())
+
+# Horas extras
+if H <= 40:
+    SF = H * SXH
+else:
+    HE = H - 40
+    S1 = 40 * SXH
+    S2 = HE * (SXH * 2)
+    SF = S1 + S2
+
+print("Las horas extras trabajadas son: ", HE)
+print("El sueldo semanal es: ", SF)
