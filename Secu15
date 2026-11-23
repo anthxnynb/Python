@@ -1,0 +1,14 @@
+print("Ingrese la coordenada x del primer punto:")
+    X1 = float(input())
+    print("Ingrese la coordenada y del primer punto:")
+    Y1 = float(input())
+    prin("Ingrese la coordenada x del segundo punto:")
+    X2 = float(input())
+    print"Ingrese la coordenada y del segundo punto:")
+    Y2 = float(input())
+    # Proceso y cálculos
+    DIS = math.sqrt((X2 - X1)**2 + (Y2 - Y1)**2)
+    XM = (X1 + X2) / 2
+    YM = (Y1 + Y2) / 2
+    print("Distancia entre los puntos: "), str(DIS)
+    print("Punto medio: ("), str(XM), str(", "), str(YM), str(")")
