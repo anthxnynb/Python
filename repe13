@@ -1,0 +1,12 @@
+S = 1500
+A = 1
+
+while A <= 6:
+    S = S * 1.10
+
+    # Entrada de datos y validaciones
+    print("Salario al finalizar el año ", A, ": $", S)
+
+    A = A + 1
+
+print("Salario final despues de 6 años: $", S)
