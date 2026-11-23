@@ -1,0 +1,23 @@
+print("Monto del prestamo:")
+P = float(input())
+
+print("Tasa trimestral en decimal (ej. 0.03):")
+T = float(input())
+
+print("Numero de trimestres:")
+N = int(input())
+
+print("Porcentaje de abono extraordinario (0 a 100):")
+B = float(input())
+
+if P <= 0 or T < 0 or N < 0 or B < 0 or B > 100:
+    print("Datos invalidos")
+else:
+    # Interes compuesto: monto = prestamo * (1 + tasa) ^ trimestres
+    M = P * (1 + T) ** N
+    A = M * B / 100
+    F = M - A
+
+    print("Monto antes del abono: $", M)
+    print("Abono extraordinario: $", A)
+    print("Monto final a cancelar: $", F)
