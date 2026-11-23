@@ -1,0 +1,34 @@
+print("Ingrese el dia (1 a 7):")
+N = int(input())
+
+# Un dia se muestra una sola vez, con tipo de actividad
+V = True
+
+match N:
+    case 1:
+        D = "Lunes"
+    case 2:
+        D = "Martes"
+    case 3:
+        D = "Miercoles"
+    case 4:
+        D = "Jueves"
+    case 5:
+        D = "Viernes"
+    case 6:
+        D = "Sabado"
+    case 7:
+        D = "Domingo"
+    case _:
+        V = False
+
+if V:
+    if N <= 5:
+        T = "Dia de clases"
+    else:
+        T = "Fin de semana"
+
+    print("Dia: ", D)
+    print("Actividad: ", T)
+else:
+    print("Numero de dia no valido")
