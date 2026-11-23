@@ -1,0 +1,25 @@
+ print("Ingrese el monto de compra:")
+    M = float(input())
+    print("Es cliente frecuente? (S/N):")
+    F = input().strip()
+    # Proceso y cálculos
+    if M < 0  or  (F != "S"  and  F != "s"  and  F != "N"  and  F != "n"):
+        print("Datos no validos")
+    else
+        if M >= 500:
+            P = 15
+        else:
+            if M >= 300:
+                P = 10
+            else:
+                if M >= 100:
+                    P = 5
+                else:
+                    P = 0
+        if F == "S"  or  F == "s":
+            P = P + 5
+        D = M * P / 100
+        T = M - D
+        print("Porcentaje de descuento: "), P, "%"
+        print"Descuento: $"),D)
+        print(Total a pagar: $"), T
