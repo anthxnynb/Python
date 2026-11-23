@@ -1,0 +1,28 @@
+print("Tipo de cliente (1 == Estudiante, 2 == Empleado, 3 == General):")
+C = int(input())
+
+print("Ingrese el monto de compra:")
+M = float(input())
+
+# Se acepta solamente un tipo valido y un monto positivo
+if C >= 1 and C <= 3 and M > 0:
+
+    # Descuento base mediante seleccion anidada
+    if C == 1:
+        D = 0.15
+    else:
+        if C == 2:
+            D = 0.10
+        else:
+            D = 0
+
+    # Descuento adicional sobre el porcentaje inicial
+    if M > 50:
+        D = D + 0.05
+
+    F = M * (1 - D)
+
+    print("Descuento aplicado: ", D * 100, "%")
+    print("Total a pagar: $", F)
+else:
+    print("Tipo de cliente o monto no valido")
