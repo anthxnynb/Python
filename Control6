@@ -1,0 +1,32 @@
+print("Tipo: 1 Estudiante, 2 Independiente, 3 Empleado, 4 Empresa")
+O = int(input())
+
+print("Ingreso anual:")
+I = float(input())
+
+V = True
+T = 0
+
+if I < 0:
+    print("Ingreso no valido")
+else:
+    # Impuesto por categoria, incluyendo recargo si procede
+    match O:
+        case 1:
+            if I >= 5000:
+                T = I * 0.05
+        case 2:
+            T = I * 0.10
+        case 3:
+            T = I * 0.12
+            if I > 20000:
+                T = T + I * 0.02
+        case 4:
+            T = I * 0.15
+        case _:
+            V = False
+
+    if V:
+        print("Impuesto anual: $", T)
+    else:
+        print("Tipo invalido")
