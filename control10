@@ -1,0 +1,19 @@
+print("1. Sumar")
+print("2. Restar")
+print("3. Multiplicar")
+print("4. Salir")
+print("Elija una opcion:")
+
+O = int(input())
+
+match O:
+    case 1:
+        print("Operacion: Suma")
+    case 2:
+        print("Operacion: Resta")
+    case 3:
+        print("Operacion: Multiplicacion")
+    case 4:
+        print("Saliendo del programa")
+    case _:
+        print("Opcion no valida")
