@@ -1,0 +1,23 @@
+print("Ingrese el monto de la compra:")
+C = float(input())
+
+# Proceso y cálculos
+while C < 0:
+    print("El monto no puede ser negativo")
+    print("Ingrese el monto de la compra:")
+    C = float(input())
+
+if C >= 200:
+    P = 0.15
+else:
+    if C >= 100:
+        P = 0.10
+    else:
+        P = 0.05
+
+D = C * P
+P1 = P * 100
+PF = C - D
+
+print("Descuento aplicado: ", P1, "%")
+print("Monto a pagar: $", PF)
