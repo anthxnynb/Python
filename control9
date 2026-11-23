@@ -1,0 +1,31 @@
+print("Moneda: 1 EUR, 2 GBP, 3 JPY, 4 MXN")
+O = int(input())
+
+print("Monto en USD:")
+M = float(input())
+
+if M < 0 or O < 1 or O > 4:
+    print("Datos invalidos")
+else:
+    # Tasa y comision por tipo
+    match O:
+        case 1:
+            T = 0.92
+            C = 0.01
+        case 2:
+            T = 0.78
+            C = 0.01
+        case 3:
+            T = 149
+            C = 0.015
+        case 4:
+            T = 17.2
+            C = 0.02
+
+    CU = M * C
+    CD = CU * T
+    R = M * T - CD
+
+    print("Comision en USD: $", CU)
+    print("Comision en moneda destino: ", CD)
+    print("Monto convertido neto: ", R)
