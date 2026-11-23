@@ -1,0 +1,33 @@
+print("Categoria: 1 Electronica, 2 Ropa, 3 Alimentos, 4 Otros")
+O = int(input())
+
+print("Cantidad:")
+C = int(input())
+
+print("Precio unitario:")
+P = float(input())
+
+if C <= 0 or P < 0 or O < 1 or O > 4:
+    print("Datos invalidos")
+else:
+    # Descuento segun categoria y volumen
+    D = 0
+
+    match O:
+        case 1:
+            if C >= 10:
+                D = 0.05
+        case 2:
+            if C >= 5:
+                D = 0.10
+        case 3:
+            D = 0.03
+        case 4:
+            D = 0
+
+    T = P * C * (1 - D)
+
+    if T > 100:
+        T = T * 0.98
+
+    print("Total a pagar: $", T)
