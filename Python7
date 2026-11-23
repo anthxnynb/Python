@@ -1,0 +1,14 @@
+print("Ingrese la nota (0 a 10):")
+N = float(input())
+
+# Primero comprobar el rango permitido
+if N >= 0 and N <= 10:
+    if N >= 9:
+        print("Excelente")
+    else:
+        if N >= 7:
+            print("Aprobado")
+        else:
+            print("Reprobado")
+else:
+    print("Nota fuera de rango")
