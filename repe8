@@ -1,0 +1,23 @@
+print("Ingrese el primer numero entero positivo:")
+A = int(input())
+
+# Proceso y cálculos
+while A <= 0:
+    print("El numero debe ser mayor que 0")
+    print("Ingrese el primer numero entero positivo:")
+    A = int(input())
+
+print("Ingrese el segundo numero entero positivo:")
+B = int(input())
+
+while B <= 0:
+    print("El numero debe ser mayor que 0")
+    print("Ingrese el segundo numero entero positivo:")
+    B = int(input())
+
+while B != 0:
+    RES = A % B
+    A = B
+    B = RES
+
+print("El maximo comun divisor es: ", A)
