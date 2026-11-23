@@ -1,0 +1,46 @@
+print("Ingrese la cantidad de calificaciones:")
+N = int(input())
+
+# Proceso y cálculos
+while N <= 0:
+    print("La cantidad debe ser mayor que 0")
+    print("Ingrese la cantidad de calificaciones:")
+    N = int(input())
+
+SUMA = 0
+APR = 0
+REP = 0
+
+for I in range(1, N + 1):
+    print("Ingrese la calificacion ", I, " (0 a 10):")
+    NOTA = float(input())
+
+    while NOTA < 0 or NOTA > 10:
+        print("La nota debe estar entre 0 y 10")
+        print("Ingrese la calificacion ", I, " (0 a 10):")
+        NOTA = float(input())
+
+    SUMA = SUMA + NOTA
+
+    if I == 1:
+        MAY = NOTA
+        MEN = NOTA
+    else:
+        if NOTA > MAY:
+            MAY = NOTA
+
+        if NOTA < MEN:
+            MEN = NOTA
+
+    if NOTA >= 7:
+        APR = APR + 1
+    else:
+        REP = REP + 1
+
+P = SUMA / N
+
+print("Promedio: ", P)
+print("Calificacion mayor: ", MAY)
+print("Calificacion menor: ", MEN)
+print("Cantidad de aprobados: ", APR)
+print("Cantidad de reprobados: ", REP)
