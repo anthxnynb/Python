@@ -1,0 +1,28 @@
+print("Ingrese el numero de alumnos:")
+N = int(input())
+
+# Proceso y cálculos
+A = 0
+R = 0
+
+while N <= 0:
+    print("La cantidad ingresada no puede ser menor ni igual a 0")
+    print("Ingrese el numero de alumnos:")
+    N = int(input())
+
+for X in range(1, N + 1):
+    print("Ingrese la calificacion del alumno: ", X)
+    NOTA = float(input())
+
+    while NOTA < 0 or NOTA > 10:
+        print("La nota no puede ser negativa ni mayor a 10")
+        print("Ingrese la calificacion del alumno: ", X)
+        NOTA = float(input())
+
+    if NOTA >= 7:
+        A = A + 1
+    else:
+        R = R + 1
+
+print("Cantidad de aprobados: ", A)
+print("Cantidad de reprobados: ", R)
