@@ -1,0 +1,13 @@
+ print(str("Ingrese el radio:"), sep="")
+    R = float(input())
+    print(str("Ingrese el angulo en grados:"), sep="")
+    G = float(input())
+    # Proceso y cálculos
+    RAD = G * 3.14159265 / 180
+    X = R * math.cos(RAD)
+    Y = R * math.sin(RAD)
+    print(str("Coordenada X: "), str(X), sep="")
+    print(str("Coordenada Y: "), str(Y), sep="")
+
+if __name__ == "__main__":
+    main()
