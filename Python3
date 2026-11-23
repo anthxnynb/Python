@@ -1,0 +1,23 @@
+print("Es estudiante? (S/N):")
+E = input().strip()
+
+print("Tiene carne vigente? (S/N):")
+C = input().strip()
+
+print("Tiene autorizacion especial? (S/N):")
+A = input().strip()
+
+if (E != "S" and E != "N") or (C != "S" and C != "N") or (A != "S" and A != "N"):
+    print("Responda en mayusculas S o N")
+else:
+    # Prioridad: estudiante con carne, o visitante autorizado
+    if E == "S":
+        if C == "S":
+            print("Acceso permitido")
+        else:
+            print("Acceso denegado: carne no vigente")
+    else:
+        if A == "S":
+            print("Ingreso temporal autorizado")
+        else:
+            print("Acceso denegado")
