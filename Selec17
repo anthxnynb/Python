@@ -1,0 +1,30 @@
+print("Ingrese el dia:")
+DIA = int(input())
+print("Ingrese el mes:")
+MES = int(input())
+print("Ingrese el anio:")
+ANIO = int(input())
+
+# Proceso y cálculos
+DM = 0
+BIS = False
+
+if ANIO > 0 and MES >= 1 and MES <= 12 and DIA >= 1:
+    if ANIO % 400 == 0 or (ANIO % 4 == 0 and ANIO % 100 != 0):
+        BIS = True
+
+    if MES == 2:
+        if BIS:
+            DM = 29
+        else:
+            DM = 28
+    else:
+        if MES == 4 or MES == 6 or MES == 9 or MES == 11:
+            DM = 30
+        else:
+            DM = 31
+
+if DM > 0 and DIA <= DM:
+    print("La fecha es valida")
+else:
+    print("La fecha no es valida")
