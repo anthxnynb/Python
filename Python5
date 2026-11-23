@@ -1,0 +1,22 @@
+print("Horas de permanencia:")
+H = float(input())
+
+print("Es estudiante UTPL? (S/N):")
+E = input().strip()
+
+if H < 0 or (E != "S" and E != "N"):
+    print("Datos invalidos")
+else:
+    # Tarifa base: un dolar por hora
+    T = H * 1
+
+    if E == "S":
+        T = T * 0.50
+
+        if H > 4:
+            T = T * 1.20
+    else:
+        if H > 6:
+            T = T * 1.20
+
+    print("Total a pagar: $", T)
