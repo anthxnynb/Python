@@ -1,0 +1,21 @@
+print("Ingrese el numero de viajes por dia:")
+    VD = int(input())
+    # Proceso y cálculos
+    while VD <= 0:
+        print("Los viajes por dia deben ser mayores que 0")
+        print("Ingrese el numero de viajes por dia:")
+        VD = int(input())
+    print("Ingrese el costo de cada pasaje:")
+    PC = float(input())
+    while PC <= 0:
+        print("El costo del pasaje debe ser mayor que 0")
+        print("Ingrese el costo de cada pasaje:"), sep="")
+        PC = float(input())
+    print("Ingrese los dias que viaja a la semana (1 a 7):")
+    DS = int(input())
+    while DS < 1  or  DS > 7:
+        print("Los dias deben estar entre 1 y 7")
+        print("Ingrese los dias que viaja a la semana (1 a 7)
+        DS = int(input())
+    GS = VD * PC * DS
+    print("El gasto semanal de transporte es: $"), str(GS)
