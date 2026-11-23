@@ -1,0 +1,29 @@
+print("Antiguedad del trabajador en anos:")
+A = float(input())
+
+print("Sueldo base:")
+S = float(input())
+
+print("Evaluacion excelente? (S/N):")
+E = input().strip()
+
+if A < 0 or S < 0 or (E != "S" and E != "N"):
+    print("Datos invalidos")
+else:
+    # Nota: el enunciado no otorga bono justo a los 2 anos
+    B = 0
+
+    if A > 2:
+        B = S * 0.10
+
+        if E == "S":
+            B = B + S * 0.05
+    else:
+        if A < 2:
+            if E == "S":
+                B = S * 0.05
+
+    T = S + B
+
+    print("Bono: $", B)
+    print("Sueldo total: $", T)
