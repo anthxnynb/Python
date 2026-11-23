@@ -1,0 +1,23 @@
+print(str("Ingrese la potencia del electrodomestico en W:"), sep="")
+    POT = float(input())
+    # Proceso y cálculos
+    while POT <= 0:
+        print(str("La potencia debe ser mayor que 0"), sep="")
+        print(str("Ingrese la potencia del electrodomestico en W:"), sep="")
+        POT = float(input())
+    print(str("Ingrese las horas de uso diario (0 a 24):"), sep="")
+    HRS = float(input())
+    while HRS < 0  or  HRS > 24:
+        print(str("Las horas deben estar entre 0 y 24"), sep="")
+        print(str("Ingrese las horas de uso diario (0 a 24):"), sep="")
+        HRS = float(input())
+    print(str("Ingrese la tarifa por kWh:"), sep="")
+    TAR = float(input())
+    while TAR < 0:
+        print(str("La tarifa no puede ser negativa"), sep="")
+        print(str("Ingrese la tarifa por kWh:"), sep="")
+        TAR = float(input())
+    CON = (POT / 1000) * HRS * 30
+    COS = CON * TAR
+    print(str("Consumo mensual: "), str(CON), str(" kWh"), sep="")
+    print(str("Costo mensual: $"), str(COS), sep="")
