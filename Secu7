@@ -1,0 +1,12 @@
+print(str("Ingrese el primer cateto:"), sep="")
+    A = float(input())
+    print(str("Ingrese el segundo cateto:"), sep="")
+    B = float(input())
+    # Proceso y cálculos
+    if A <= 0  or  B <= 0:
+        print(str("Los catetos deben ser mayores que cero"), sep="")
+    else:
+        H = math.sqrt(A ** 2 + B ** 2)
+        AR = A * B / 2
+        print(str("Hipotenusa: "), str(H), sep="")
+        print(str("Area: "), str(AR), sep="")
