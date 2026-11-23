@@ -1,0 +1,17 @@
+print("Ingrese el primer numero:")
+N1 = float(input())
+print("Ingrese el segundo numero:")
+N2 = float(input())
+print("Ingrese el tercer numero:")
+N3 = float(input())
+
+# Proceso y cálculos
+if N1 <= N2 and N1 <= N3:
+    MEN = N1
+else:
+    if N2 <= N1 and N2 <= N3:
+        MEN = N2
+    else:
+        MEN = N3
+
+print("El menor de los tres numeros es: ", MEN)
