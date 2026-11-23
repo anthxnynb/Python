@@ -1,0 +1,38 @@
+print("Ingrese un numero entero decimal no negativo:")
+NUM = int(input())
+
+# Proceso y cálculos
+while NUM < 0:
+    print("El numero debe ser no negativo")
+    print("Ingrese un numero entero decimal no negativo:")
+    NUM = int(input())
+
+HEX = ""
+
+if NUM == 0:
+    HEX = "0"
+else:
+    while NUM > 0:
+        RES = NUM % 16
+
+        if RES < 10:
+            DIG = str(RES)
+        else:
+            match RES:
+                case 10:
+                    DIG = "A"
+                case 11:
+                    DIG = "B"
+                case 12:
+                    DIG = "C"
+                case 13:
+                    DIG = "D"
+                case 14:
+                    DIG = "E"
+                case 15:
+                    DIG = "F"
+
+        HEX = DIG + HEX
+        NUM = NUM // 16
+
+print("Representacion hexadecimal: ", HEX)
