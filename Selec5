@@ -1,0 +1,25 @@
+print("Ingrese la coordenada X:")
+X = float(input())
+print("Ingrese la coordenada Y:")
+Y = float(input())
+
+# Proceso y cálculos
+if X == 0 and Y == 0:
+    print("El punto esta en el origen")
+else:
+    if X == 0:
+        print("El punto esta sobre el eje Y")
+    else:
+        if Y == 0:
+            print("El punto esta sobre el eje X")
+        else:
+            if X > 0 and Y > 0:
+                print("Primer cuadrante")
+            else:
+                if X < 0 and Y > 0:
+                    print("Segundo cuadrante")
+                else:
+                    if X < 0 and Y < 0:
+                        print("Tercer cuadrante")
+                    else:
+                        print("Cuarto cuadrante")
