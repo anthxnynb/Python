@@ -1,0 +1,27 @@
+print("Ingrese la distancia del viaje en km:")
+KM = float(input())
+
+# Proceso y cálculos
+while KM < 0:
+    print("La distancia no puede ser negativa")
+    print("Ingrese la distancia del viaje en km:")
+    KM = float(input())
+
+print("Es de noche? Ingrese S o N:")
+NOC = input().strip()
+
+while NOC != "S" and NOC != "N":
+    print("Debe ingresar S o N")
+    print("Es de noche? Ingrese S o N:")
+    NOC = input().strip()
+
+TAR = 2 + (1.5 * KM)
+TOT = TAR
+
+if KM > 10:
+    TOT = TOT + (TOT * 0.20)
+
+if NOC == "S":
+    TOT = TOT + (TOT * 0.30)
+
+print("Total a pagar: $", TOT)
