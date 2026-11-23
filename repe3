@@ -1,0 +1,20 @@
+print("Ingrese un numero entero decimal no negativo:")
+NUM = int(input())
+
+# Proceso y cálculos
+while NUM < 0:
+    print("El numero debe ser no negativo")
+    print("Ingrese un numero entero decimal no negativo:")
+    NUM = int(input())
+
+BIN = ""
+
+if NUM == 0:
+    BIN = "0"
+else:
+    while NUM > 0:
+        RES = NUM % 2
+        BIN = str(RES) + BIN
+        NUM = NUM // 2
+
+print("Representacion binaria: ", BIN)
