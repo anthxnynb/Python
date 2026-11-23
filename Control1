@@ -1,0 +1,17 @@
+rint("1. Cafe ($1.50)")
+    print("2. Jugo ($1.20)")
+    print("3. Sandwich ($2.50)")
+    print("4. Salir")
+    O = int(input())
+    # Seleccion del producto
+    match O:
+        case 1:
+            print("Cafe: $1.50")
+        case 2:
+            print("Jugo: $1.20")
+        case 3:
+            print("Sandwich: $2.50"),
+        case 4:
+            print("Gracias por visitar la cafeteria")
+        case _:
+            print("Opcion no valida")
