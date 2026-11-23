@@ -1,0 +1,16 @@
+print("Ingrese un numero entero positivo:")
+N = int(input())
+
+# Proceso y cálculos
+if N <= 0:
+    print("El numero debe ser positivo")
+else:
+    T = N
+    INV = 0
+
+    while T > 0:
+        D = T % 10
+        INV = INV * 10 + D
+        T = T // 10
+
+    print("Numero invertido: ", INV)
