@@ -1,0 +1,18 @@
+print("Letra de calificacion (A, B, C, D, F):")
+L = input().strip()
+L = str.upper(L)
+
+# Correspondencia entre letra y rango
+match L:
+    case "A":
+        print("Nota entre 9.0 y 10.0")
+    case "B":
+        print("Nota entre 8.0 y 8.9")
+    case "C":
+        print("Nota entre 7.0 y 7.9")
+    case "D":
+        print("Nota entre 6.0 y 6.9")
+    case "F":
+        print("Nota entre 0.0 y 5.9")
+    case _:
+        print("Letra no valida")
