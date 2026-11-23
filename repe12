@@ -1,0 +1,16 @@
+# Entrada de datos y validaciones
+print("Ingrese un numero entero")
+N = int(input())
+
+# Proceso y cálculos
+if N < 0:
+    print("No existe factorial para numeros negativos")
+else:
+    X = N
+    F = 1
+
+    while X >= 1:
+        F = F * X
+        X = X - 1
+
+    print("El factorial del numero es:", F)
