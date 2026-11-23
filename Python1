@@ -1,0 +1,25 @@
+print("Es estudiante UTPL? (S/N):")
+E = input().strip()
+
+print("Monto de compra:")
+M = float(input())
+
+if M < 0 or (E != "S" and E != "N" and E != "s" and E != "n"):
+    print("Datos invalidos")
+else:
+    # Descuentos por tipo de cliente
+    D = 0
+
+    if E == "S" or E == "s":
+        D = 20
+
+        if M > 30:
+            D = D + 5
+    else:
+        if M > 50:
+            D = 10
+
+    T = M * (1 - D / 100)
+
+    print("Descuento aplicado: ", D, "%")
+    print("Total a pagar: $", T)
