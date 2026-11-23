@@ -1,0 +1,19 @@
+ print("Ingrese el promedio (0 a 10):")
+    P = float(input())
+    print("Ingrese la asistencia (0 a 100):")
+    A = float(input())
+    # Proceso y cálculos
+    if P < 0  or  P > 10  or  A < 0  or  A > 100:
+        CAT = "Datos no validos"
+    else:
+        if P >= 9  and  A >= 90:
+            CAT = "Excelente"
+        else:
+            if P >= 7  and  A >= 80:
+                CAT = "Bueno"
+            else:
+                if P >= 6  and  A >= 70:
+                    CAT = "Regular"
+                else:
+                    CAT = "Deficiente"
+    print("Categoria: "), CAT
