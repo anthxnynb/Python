@@ -1,0 +1,27 @@
+print("1. Km a m")
+print("2. m a cm")
+print("3. Horas a minutos")
+print("4. Salir")
+
+O = int(input())
+
+if O >= 1 and O <= 3:
+    print("Ingrese el valor a convertir:")
+    V = float(input())
+
+    # Conversión por opción
+    match O:
+        case 1:
+            R = V * 1000
+        case 2:
+            R = V * 100
+        case 3:
+            R = V * 60
+
+    print("Resultado: ", R)
+else:
+    match O:
+        case 4:
+            print("Fin del conversor")
+        case _:
+            print("Opcion no valida")
