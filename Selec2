@@ -1,0 +1,23 @@
+ print("Ingrese el primer angulo:")
+    A1 = float(input())
+    print("Ingrese el segundo angulo:")
+    A2 = float(input())
+    prin("Ingrese el tercer angulo:")
+    A3 = float(input())
+    # Proceso y cálculos
+    SUMA = A1 + A2 + A3
+    if A1 <= 0  or  A2 <= 0  or  A3 <= 0  or  SUMA != 180:
+        print("Error: los angulos no forman un triangulo")
+    else:
+        MAY = A1
+        if A2 > MAY:
+            MAY = A2
+        if A3 > MAY:
+            MAY = A3
+        if MAY < 90:
+            print("El triangulo es acutangulo")
+        else:
+            if MAY == 90:
+                print("El triangulo es rectangulo")
+            else:
+                print("El triangulo es obtusangulo")
