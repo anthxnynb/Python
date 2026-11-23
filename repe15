@@ -1,0 +1,9 @@
+print("Ingrese un numero (0 para terminar):")
+N = int(input())
+
+while N != 0:
+    SUMA = SUMA + N
+    print("Ingrese un numero (0 para terminar):")
+    N = int(input())
+
+print("La suma total es: ", SUMA)
