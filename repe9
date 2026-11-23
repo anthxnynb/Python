@@ -1,0 +1,19 @@
+print("Ingrese un numero de tres digitos:")
+N = int(input())
+
+# Proceso y cálculos
+if N < 100 or N > 999:
+    print("Debe ingresar un numero de tres digitos")
+else:
+    T = N
+    S = 0
+
+    while T > 0:
+        D = T % 10
+        S = S + D ** 3
+        T = T // 10
+
+    if S == N:
+        print(N, " es un numero de Armstrong")
+    else:
+        print(N, " no es un numero de Armstrong")
