@@ -1,0 +1,14 @@
+ print(str("Ingrese el capital:"), sep="")
+    Cap = float(input())
+    print(str("Ingrese la tasa anual en decimal:"), sep="")
+    T = float(input())
+    print(str("Ingrese el plazo en meses:"), sep="")
+    N = int(input())
+    # Proceso y cálculos
+    if Cap < 0  or  T < 0  or  N <= 0:
+        print("Datos no validos"), sep=""
+    else:
+        IT = C * T * (N / 12)
+        CU = (C + IT) / N
+        print(str("Interes total: $"), str(IT), sep="")
+        print(str("Cuota mensual: $"), str(CU), sep="")
