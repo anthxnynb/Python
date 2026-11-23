@@ -1,0 +1,7 @@
+   print("Ingresar el radio:")
+    R = float(input())
+    # Proceso y cálculos
+    L = 2*3.14159265*R
+    A = 3.14159265*(R)**2
+    print("La longitud es:"), str(L),
+    print("El area del circulo es:"), str(A)
