@@ -1,0 +1,10 @@
+print("Ingrese el numero entero para mostrar su tabla:")
+K = int(input())
+
+# Proceso y cálculos
+I = 1
+
+while I <= 10:
+    R = K * I
+    print(K, " x ", I, " == ", R)
+    I = I + 1
