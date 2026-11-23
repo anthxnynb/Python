@@ -1,0 +1,8 @@
+print("Ingrese un numero entero:")
+N = int(input())
+
+# Proceso y cálculos
+if N % 2 == 0:
+    print("El numero es PAR")
+else:
+    print("El numero es IMPAR")
