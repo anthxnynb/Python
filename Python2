@@ -1,0 +1,14 @@
+print("Temperatura en grados Celsius:")
+T = float(input())
+
+# Clasificación con selección anidada
+if T < 15:
+    print("Clima frio")
+else:
+    if T <= 25:
+        print("Clima templado")
+    else:
+        print("Clima calido")
+
+        if T > 30:
+            print("Alerta: calor extremo")
