@@ -1,0 +1,34 @@
+print("Ingrese nota parcial 1")
+N1 = float(input())
+
+# Proceso y cálculos
+while N1 < 0 or N1 > 10:
+    print("La nota no puede menor que 0 ni mayor a 10")
+    print("Ingrese nota parcial 1")
+    N1 = float(input())
+
+# Ingreso y verificacion de la nota dos
+print("Ingrese nota parcial 2")
+N2 = float(input())
+
+while N2 < 0 or N2 > 10:
+    print("La nota no puede menor que 0 ni mayor a 10")
+    print("Ingrese nota parcial 2")
+    N2 = float(input())
+
+# Ingreso y verificacion de la nota tres
+print("Ingrese nota parcial 3")
+N3 = float(input())
+
+while N3 < 0 or N3 > 10:
+    print("La nota no puede menor que 0 ni mayor a 10")
+    print("Ingrese nota parcial 3")
+    N3 = float(input())
+
+# Calculo del promedio
+P = (N1+N2+N3)/3
+
+if P >= 7:
+    print("El estudiante aprueba y su promedio es:", P)
+else:
+    print("El estudiante no aprueba y su promedio es:", P)
