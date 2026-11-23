@@ -1,0 +1,14 @@
+print("Ingrese N:")
+N = int(input())
+
+# Proceso y cálculos
+C = 0
+S = 0
+
+for I in range(1, N + 1):
+    if I % 3 == 0 or I % 5 == 0:
+        C = C + 1
+        S = S + I
+
+print("Cantidad de multiplos: ", C)
+print("Suma de multiplos: ", S)
