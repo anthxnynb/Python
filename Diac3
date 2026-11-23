@@ -1,0 +1,33 @@
+print("Venta diaria (-1 para terminar):")
+V = float(input())
+
+# Las ventas negativas distintas de -1 no cuentan como dias
+while V != -1:
+    if V < 0:
+        print("Venta no valida; ingrese cero o un valor positivo")
+    else:
+        D = D + 1
+        S = S + V
+
+        if V > 500:
+            C = C + 1
+
+        if D == 1 or V > MAX:
+            MAX = V
+            DM = D
+
+    print("Siguiente venta (-1 para terminar):")
+    V = float(input())
+
+# Resumen, evitando dividir por cero
+print("Total de ventas: $", S)
+print("Dias con venta superior a $500: ", C)
+
+if D > 0:
+    P = S / D
+    print("Promedio de ventas: $", P)
+    print("Dia de mayor venta: ", DM)
+    print("Mayor venta: $", MAX)
+else:
+    print("Promedio: no hay ventas registradas")
+    print("No hay dia con mayor venta")
