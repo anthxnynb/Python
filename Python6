@@ -1,0 +1,29 @@
+print("Es estudiante? (1 == Si, 0 == No):")
+E = int(input())
+
+print("Ingrese la hora del viaje (0 a 23):")
+H = int(input())
+
+print("Ingrese la tarifa base:")
+T = float(input())
+
+# Verificar los datos antes de calcular
+if (E == 0 or E == 1) and (H >= 0 and H <= 23) and T >= 0:
+    D = 0
+
+    # Seleccion anidada por tipo de pasajero y horario
+    if E == 1:
+        D = 0.30
+
+        if H >= 9 and H <= 16:
+            D = D + 0.10
+    else:
+        if H >= 9 and H <= 16:
+            D = 0.10
+
+    F = T * (1 - D)
+
+    print("Descuento aplicado: ", D * 100, "%")
+    print("Tarifa final: $", F)
+else:
+    print("Datos no validos")
