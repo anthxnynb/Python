@@ -1,0 +1,17 @@
+ print(str("Ingrese el largo del rectangulo en metros:")
+    L = float(input())
+    # Proceso y cálculos
+    while L <= 0:
+        print("El largo debe ser mayor que 0")
+        print("Ingrese el largo del rectangulo en metros:")
+        L = float(input())
+    print("Ingrese el ancho del rectangulo en metros:")
+    A = float(input())
+    while A <= 0:
+        print("El ancho debe ser mayor que 0"), sep="")
+        print("Ingrese el ancho del rectangulo en metros:")
+        A = float(input())
+    AREA = L * A
+    P = 2 * (L + A)
+    print("El area del rectangulo es: "), str(AREA), str(" metros cuadrados")
+    print("perimetro del rectangulo es: "), str(P), str(" metros")
